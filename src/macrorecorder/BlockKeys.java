@@ -37,15 +37,15 @@ public void run() {
                     if(info.vkCode == 0x1B) {
                         User32.INSTANCE.UnhookWindowsHookEx(hhk);
                     }
-//                    switch (info.vkCode){   
-//                        case 0x5B:System.err.println("l win"); return new LRESULT(1);
-//                        case 0x5C:System.err.println("r win"); return new LRESULT(1);
-//                        case 0xA2:System.err.println("l ctrl"); return new LRESULT(1);
-//                        case 0xA3:System.err.println("r ctrl"); return new LRESULT(1);
-//                        case 0xA4:System.err.println("l alt"); return new LRESULT(1);
-//                        case 0xA5:System.err.println("r alt"); return new LRESULT(1); 
-//                        default: System.out.println("Key Pressed : "+info.vkCode);//do nothing
-//                    }
+                    switch (info.vkCode){   
+                        case 0x5B:System.err.println("l win"); return new LRESULT(1);
+                        case 0x5C:System.err.println("r win"); return new LRESULT(1);
+                        case 0xA2:System.err.println("l ctrl"); return new LRESULT(1);
+                        case 0xA3:System.err.println("r ctrl"); return new LRESULT(1);
+                        case 0xA4:System.err.println("l alt"); return new LRESULT(1);
+                        case 0xA5:System.err.println("r alt"); return new LRESULT(1); 
+                        default: System.out.println("Key Pressed : "+info.vkCode);//do nothing
+                    }
                 }  return lib.CallNextHookEx(hhk, nCode, wParam, info.getPointer());
             }            
 
